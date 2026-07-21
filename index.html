@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dopeski — Macro Tracker for Lifters</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Dopeski 💪</h1>
+    <p class="tagline">Macro tracking built for people who actually lift.</p>
+  </header>
+
+  <main>
+    <section class="goals-card">
+      <h2>Daily Goals</h2>
+      <div class="goal-inputs">
+        <label>Calories <input type="number" id="goalCalories" placeholder="2400" /></label>
+        <label>Protein (g) <input type="number" id="goalProtein" placeholder="180" /></label>
+        <label>Carbs (g) <input type="number" id="goalCarbs" placeholder="250" /></label>
+        <label>Fat (g) <input type="number" id="goalFat" placeholder="70" /></label>
+      </div>
+      <button id="saveGoals">Save Goals</button>
+    </section>
+
+    <section class="progress-card">
+      <h2>Today's Progress</h2>
+      <div class="macro-bars" id="macroBars"></div>
+    </section>
+
+    <section class="log-card">
+      <h2>Log Food</h2>
+      <form id="logForm">
+        <input type="text" id="foodName" placeholder="Food name (e.g. Chicken Breast)" required />
+        <div class="log-inputs">
+          <input type="number" id="foodCalories" placeholder="Calories" required />
+          <input type="number" id="foodProtein" placeholder="Protein (g)" required />
+          <input type="number" id="foodCarbs" placeholder="Carbs (g)" required />
+          <input type="number" id="foodFat" placeholder="Fat (g)" required />
+        </div>
+        <button type="submit">Add Entry</button>
+      </form>
+    </section>
+
+    <section class="entries-card">
+      <h2>Today's Entries</h2>
+      <ul id="entriesList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Data is stored locally in your browser for now — MVP build.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
